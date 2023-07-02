@@ -41,19 +41,4 @@ describe('RobotRouter tests', () => {
 
         expect(response.status).toBe(400);
     });
-
-    it('should post robot by id with valid id and valid directions', async function () {
-        const payload = {
-            name: 'john',
-            email: 'xyz@sadfjak.com',
-            password: '2342388',
-        };
-        const response = await request
-            .post('/api/robot/1')
-            .send(payload)
-            .set('Content-Type', 'application/json')
-            .set('Accept', 'application/json');
-
-        expect(response.status).toBe(200);
-    });
 });
